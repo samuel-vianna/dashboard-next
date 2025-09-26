@@ -1,3 +1,5 @@
+'use client'
+
 import { useThemeStore } from "@/store/theme";
 import { LineChartOutlined, MoonFilled, SunFilled } from "@ant-design/icons";
 import { Button, Space, theme, Typography } from "antd";
