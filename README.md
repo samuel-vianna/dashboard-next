@@ -11,7 +11,7 @@ The dashboard showcases clear chart visualizations, handles missing data gracefu
 
 <div align="center">
     <img src="./public/table.jpeg" alt="Table Screenshot" width="400"/>
-    <img src="./public/AI.jpeg" alt="AI Screenshot" width="400"/>
+    <img src="./public/ai.jpeg" alt="AI Screenshot" width="400"/>
 </div>
 
 ---
