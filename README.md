@@ -91,20 +91,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-### Run with Docker
-
-Make sure **Docker** is installed.
-
-**Build and run the container:**
-
-```bash
-docker compose up --build .
-```
-
-Access the app at [http://localhost:3000](http://localhost:3000).
-
----
-
 ## Mock AI UI
 
 The AI assistant UI includes an input with the placeholder:
