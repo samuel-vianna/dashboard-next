@@ -13,8 +13,8 @@ function getFormattedData(data: (number | null)[], type: LineChartType) {
   if (type === "cumulative") {
     const result: number[] = [];
     data.forEach((d, index) => {
-      let current = d ?? 0;
-      let sum = result.reduce((a, b) => a + b, 0);
+      const current = d ?? 0;
+      const sum = result.reduce((a, b) => a + b, 0);
       result.push(current + sum);
     });
     return result;

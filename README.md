@@ -1,137 +1,158 @@
-# Escala Fácil
+# Dashboard Next (BrandAI Mock)
 
-Sistema de gestão de escalas simples e eficiente, desenvolvido com Next.js, TypeScript e Ant Design.
+This is a small dashboard demo built with **Next.js**, **TypeScript**, **Ant Design**, **Tailwind CSS**, **React Query**, and **Zustand** for state management.
+It contains mock data and a front-end only AI assistant called **"BrandAI / Mila"** to demonstrate how an AI or MCP layer might interact with the UI.
 
-## 🚀 Funcionalidades
+The dashboard showcases clear chart visualizations, handles missing data gracefully, and simulates AI interactions for exploratory data analysis.
 
-- ✅ Criação e gerenciamento de escalas
-- ✅ Compartilhamento por link
-- ✅ Sistema de respostas online
-- ✅ Escalas eliminatórias e acumulativas
-- ✅ Exportação de dados (CSV)
-- ✅ Design responsivo
-- ✅ SEO otimizado
-- ✅ Monetização com Google AdSense
-- ✅ Google Analytics integrado
+---
 
-## 🛠️ Tecnologias
+## Tech Stack
 
-- **Next.js 15** - Framework React
-- **TypeScript** - Tipagem estática
-- **Ant Design** - Componentes UI
-- **Tailwind CSS** - Estilização
-- **Google AdSense** - Monetização
-- **Google Analytics** - Métricas
+- **Framework & Language:** Next.js, TypeScript
+- **UI Components:** Ant Design, Tailwind CSS
+- **Charts:** ECharts, echarts-for-react
+- **State Management:** Zustand
+- **Data Fetching:** React Query
+- **Testing & Linting:** ESLint, TypeScript type checking
 
-## 📦 Instalação
+---
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/escala-facil.git
-cd escala-facil
+## Architecture Overview
+
+The project follows a modular structure with clear separation of concerns:
+
+```
+.
+├── app              # Main entry point, global layout
+├── components       # Reusable UI components
+├── data             # Mock data
+├── hooks            # Custom hooks
+├── layout           # Layouts for different tabs
+├── services         # API/service layer
+├── store            # Zustand state stores
+├── styles           # Global and Tailwind styles
+├── types            # Type definitions
+└── utils            # Utility functions
 ```
 
-2. Instale as dependências:
+Key features include:
+
+- **Global state** via Zustand for consistent theme and data handling.
+- **Data fetching** handled with React Query with caching and error handling.
+- **Charts** using ECharts for interactive visualization.
+- **Responsive design** with Tailwind CSS.
+- **AI/MCP simulation** via a mock chat assistant interface.
+
+---
+
+## Features
+
+- **Overview Section:** Displays total sales and average sales per week.
+- **Bar Chart:** Compares brands over time.
+- **Pie Chart:** Displays total sales by brand to highlight performance.
+- **Brand-Specific Section:** Lets users select a brand and view detailed trends ("Week-over-Week" or "Cumulative Total").
+- **Summary Table:** Shows average sales per category, grouped by brand.
+- **Mock AI Assistant:** Simulates AI queries and responses with a simple chat UI.
+
+---
+
+## Setup
+
+Dependencies:
+
+- Node.js (18.x)
+- NPM (9.x)
+
+### Install dependencies
+
 ```bash
 npm install
 ```
 
-3. Configure as variáveis de ambiente:
+---
+
+### Run locally
+
+Start the development server:
+
 ```bash
-cp env.example .env.local
+npm run dev
 ```
 
-4. Edite o arquivo `.env.local` com suas credenciais:
-```env
-NEXT_PUBLIC_ADSENSE_CLIENT_ID=ca-pub-SEU_CLIENT_ID
-NEXT_PUBLIC_GA_MEASUREMENT_ID=G-SEU_MEASUREMENT_ID
-NEXT_PUBLIC_SITE_URL=https://seudominio.com.br
-NEXT_PUBLIC_GOOGLE_VERIFICATION=seu-codigo-verificacao
-```
-
-## 🚀 Deploy
-
-### Vercel (Recomendado)
-
-1. Conecte seu repositório ao Vercel
-2. Configure as variáveis de ambiente no painel do Vercel
-3. Faça o deploy
-
-### Outros provedores
+Or Build and start the production server:
 
 ```bash
 npm run build
-npm start
+npm run start
 ```
 
-## 📊 Configuração do Google AdSense
-
-1. Acesse [Google AdSense](https://www.google.com/adsense/)
-2. Crie uma conta e obtenha seu Publisher ID
-3. Substitua `ca-pub-XXXXXXXXXXXXXXXX` no arquivo `.env.local`
-4. Configure os slots de anúncios nos componentes AdSense
-
-## 📈 Configuração do Google Analytics
-
-1. Acesse [Google Analytics](https://analytics.google.com/)
-2. Crie uma propriedade e obtenha o Measurement ID
-3. Substitua `G-XXXXXXXXXX` no arquivo `.env.local`
-
-## 🔍 SEO
-
-O projeto inclui:
-- Meta tags otimizadas
-- Sitemap.xml automático
-- Robots.txt configurado
-- Structured data (JSON-LD)
-- Open Graph tags
-- Twitter Cards
-
-## 📱 Responsividade
-
-O design é totalmente responsivo e funciona em:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (até 767px)
-
-## 🎨 Customização
-
-### Cores
-As cores podem ser customizadas no arquivo `tailwind.config.ts`
-
-### Componentes
-Os componentes Ant Design podem ser customizados através de CSS ou styled-components
-
-## 📄 Páginas Legais
-
-- `/privacidade` - Política de Privacidade
-- `/termos` - Termos de Uso
-
-## 🤝 Contribuição
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## 📞 Suporte
-
-Para suporte, envie um email para suporte@escalafacil.com.br ou abra uma issue no GitHub.
-
-## 🎯 Roadmap
-
-- [ ] Autenticação de usuários
-- [ ] Notificações por email
-- [ ] API REST
-- [ ] App mobile
-- [ ] Integração com calendários
-- [ ] Relatórios avançados
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-Desenvolvido com ❤️ para facilitar a gestão de escalas
+### Run with Docker
+
+Make sure **Docker** is installed.
+
+**Build and run the container:**
+
+```bash
+docker compose up --build .
+```
+
+Access the app at [http://localhost:3000](http://localhost:3000).
+
+---
+
+## Mock AI UI
+
+The AI assistant UI includes an input with the placeholder:
+
+> "Ask to Mila.."
+
+When you submit a question the UI shows a short loading state (~500ms) and then displays the placeholder response:
+
+> "Mila would return a filtered chart for Brand A Supplements."
+
+This is a front-end mock only; there is no external AI integration.
+
+---
+
+## Notes
+
+### Handling null / invalid data
+
+We replace null values with zero, as they represent weeks with no sales.
+These weeks are still included in the calculations to ensure that averages and totals are not distorted by missing data.
+UI components defensively check for undefined fields to prevent errors.
+
+### Chart & Table design thoughts
+
+Charts should prioritize clarity and effective comparison. In this dashboard, we start with an overview section showing total sales and average sales per week.
+This is followed by a bar chart comparing brands over time and a pie chart illustrating total sales by brand to highlight which brand performed best.
+A dedicated section presents brand-specific charts, allowing users to select a brand and view detailed trends either as “Week-over-Week” or “Cumulative Total.”
+Finally, a summary table displays the average sales per category, grouped by brand, enabling quick comparison of category performance.
+Charts include consistent color coding, legends, hover tooltips, and clear handling of missing data.
+
+### How AI / MCP could extend this project
+
+An AI or MCP layer could significantly enhance the project by providing data-driven insights, conducting market research, and generating competitor comparisons.
+In this example, a chat interface simulates an AI assistant integrated with a mocked service, which can be replaced by a real AI engine in a production setting.
+By adding MCP capabilities—such as search tools and data analysis integrated with the dashboard—it would be possible to create a robust AI-powered analytical tool.
+This layer could interpret natural language queries, translate them into structured filters or visualizations, and return actionable insights to the user.
+
+---
+
+## Future Improvements
+
+- Implement real AI integration for BrandAI using GPT or similar models.
+- Add authentication and rate-limiting for API usage.
+- Extend MCP capabilities with anomaly detection and advanced analytics.
+- Add export functionality for charts and tables (CSV, PDF).
+
+---
+
+## Where to find the docs
+
+The same notes are available inside the app under the **About** tab.

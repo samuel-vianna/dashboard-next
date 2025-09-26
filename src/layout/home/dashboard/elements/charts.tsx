@@ -12,7 +12,7 @@ export default function Charts({ data }: ChartsProps) {
   const brands = data?.brands || [];
   const weeks = data?.dateRange || [];
 
-  const selectedBranch = brands?.find((b: any) => b.name === selectedBrand);
+  const selectedBranch = brands?.find((b) => b.name === selectedBrand);
 
   const lineChartData =
     selectedBranch?.categories.map((cat) => ({

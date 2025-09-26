@@ -1,5 +1,5 @@
 import { ReloadOutlined, SendOutlined } from "@ant-design/icons";
-import { Button, Form, Input, Space, Tooltip } from "antd";
+import { Button, Form, Input, Tooltip } from "antd";
 import { FormValues } from "..";
 
 interface ChatInputProps {

@@ -1,5 +1,4 @@
-import { ArrowDownOutlined } from "@ant-design/icons";
-import { Card, Statistic, Typography } from "antd";
+import { Card, Statistic } from "antd";
 
 interface AverageSalesComponentProps {
   category?: Category;
@@ -21,13 +20,7 @@ export default function AverageSalesComponent({
 
   return (
     <Card>
-      <Statistic
-        title={category?.name}
-        value={avg}
-        // valueStyle={{ color: "#cf1322" }}
-        // prefix={<ArrowDownOutlined />}
-        // suffix="%"
-      />
+      <Statistic title={category?.name} value={avg} />
     </Card>
   );
 }

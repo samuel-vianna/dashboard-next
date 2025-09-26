@@ -29,7 +29,7 @@ export default function Home() {
       setData(data);
       setFetching(isFetching);
     }
-  }, [isSuccess]);
+  }, [isSuccess, data, setData, setFetching]);
 
   const items: TabsProps["items"] = [
     {

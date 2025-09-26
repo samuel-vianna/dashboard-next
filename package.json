@@ -4,24 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next-sitemap",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "postbuild": "next-sitemap"
+    "lint": "eslint"
   },
   "dependencies": {
     "@ant-design/icons": "^6.0.2",
     "@ant-design/nextjs-registry": "^1.1.0",
     "@tanstack/react-query": "^5.90.2",
     "antd": "^5.27.4",
-    "clsx": "^2.1.1",
-    "dayjs": "^1.11.18",
     "echarts": "^5.6.0",
     "echarts-for-react": "^3.0.2",
-    "lucide-react": "^0.544.0",
     "next": "15.5.3",
     "next-seo": "^6.8.0",
-    "next-sitemap": "^4.2.3",
     "next-themes": "^0.4.6",
     "postcss": "^8.5.6",
     "react": "18",

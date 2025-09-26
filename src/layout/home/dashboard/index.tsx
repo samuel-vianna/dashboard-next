@@ -19,7 +19,7 @@ export default function DashboardLayout() {
     if (data) {
       toggleBrand(data.brands[0].name);
     }
-  }, [data]);
+  }, [data, toggleBrand]);
 
   return (
     <TabWrapper>
@@ -29,7 +29,7 @@ export default function DashboardLayout() {
         {/* Filters */}
         <Space>
           <Select
-            options={brands.map((b: any) => ({ label: b.name, value: b.name }))}
+            options={brands.map((b) => ({ label: b.name, value: b.name }))}
             value={selectedBrand}
             className="w-[200px]"
             onChange={toggleBrand}
