@@ -1,7 +1,7 @@
 import { mockup } from "@/data/mockup";
 
 class ApiService {
-  async get_brands(): Promise<BrandsResponse> {
+  async getBrands(): Promise<BrandsResponse> {
     const response: BrandsResponse = mockup;
 
     await new Promise((resolve) => setTimeout(resolve, 300)); // simulate API call delay

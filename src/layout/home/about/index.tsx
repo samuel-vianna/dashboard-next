@@ -1,3 +1,5 @@
+import TabWrapper from "@/components/ui/tabWrapper";
+
 export default function AboutLayout() {
-  return <div>About</div>;
+  return <TabWrapper>About</TabWrapper>;
 }

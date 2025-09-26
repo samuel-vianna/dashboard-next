@@ -1,33 +1,28 @@
 "use client";
 
-import { apiService } from "@/services/api";
-import { useQuery } from "@tanstack/react-query";
 import { Select, Skeleton, Space, Switch } from "antd";
 import { useFiltersStore } from "@/store/filters";
 import AverageSales from "./elements/averageSales";
 import Charts from "./elements/charts";
 import GeneralSales from "./elements/general";
 import { useEffect } from "react";
+import { useDataStore } from "@/store/data";
+import TabWrapper from "@/components/ui/tabWrapper";
 
 export default function DashboardLayout() {
   const { selectedBrand, toggleBrand, selectedFrequency, toggleFrequency } =
     useFiltersStore();
-
-  const { isFetching, data, isSuccess } = useQuery({
-    queryKey: ["get-brands"],
-    queryFn: apiService.get_brands,
-  });
-
+  const { data, isFetching } = useDataStore();
   const brands = data?.brands ?? [];
 
   useEffect(() => {
     if (data) {
       toggleBrand(data.brands[0].name);
     }
-  }, [isSuccess]);
+  }, [data]);
 
   return (
-    <div className="px-2 py-1 md:px-8 md:py-4 overflow-y-auto h-full">
+    <TabWrapper>
       <Skeleton active loading={isFetching}>
         <GeneralSales data={data} />
 
@@ -52,6 +47,6 @@ export default function DashboardLayout() {
         <Charts data={data} />
         <AverageSales data={data} />
       </Skeleton>
-    </div>
+    </TabWrapper>
   );
 }
