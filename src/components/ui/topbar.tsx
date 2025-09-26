@@ -1,12 +1,12 @@
 import { useThemeStore } from "@/store/theme";
-import { CalendarOutlined, MoonFilled, SunFilled } from "@ant-design/icons";
+import { LineChartOutlined, MoonFilled, SunFilled } from "@ant-design/icons";
 import { Button, Space, theme, Typography } from "antd";
 
 const { Title } = Typography;
 
 export default function TopBar() {
   const {
-    token: { colorBgContainer },
+    token: { colorBgContainer, colorPrimary },
   } = theme.useToken();
   const { isThemeDark, toggleTheme } = useThemeStore();
 
@@ -16,9 +16,9 @@ export default function TopBar() {
       style={{ backgroundColor: colorBgContainer }}
     >
       <Space>
-        <CalendarOutlined style={{ fontSize: "24px", color: "#1890ff" }} />
+        <LineChartOutlined style={{ fontSize: "24px", color: colorPrimary }} />
         <Title level={2} style={{ margin: 0 }}>
-          Escala Fácil
+          Sales Dashboard
         </Title>
       </Space>
       <div>

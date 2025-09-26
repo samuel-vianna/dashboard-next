@@ -1,5 +1,4 @@
 import { theme, Typography } from "antd";
-import Link from "next/link";
 
 const { Text } = Typography;
 
@@ -14,7 +13,7 @@ export default function Footer() {
         className="text-center py-1"
         style={{ backgroundColor: colorBgContainer }}
       >
-        <Text>© 2024 Escala Fácil. Todos os direitos reservados.</Text>
+        <Text>Made by Samuel Vianna.</Text>
       </div>
     </footer>
   );

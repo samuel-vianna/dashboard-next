@@ -39,9 +39,9 @@ export default function Home() {
     >
       <Layout className="flex flex-col h-screen">
         <TopBar />
-        <div className="px-2 md:px-8 flex-1">
-          <Tabs items={items} className="flex-1" />
-        </div>
+        <Layout.Content className="flex flex-1 overflow-y-hidden">
+          <Tabs items={items} className="flex-1 overflow-y-auto" />
+        </Layout.Content>
         <Footer />
       </Layout>
     </ConfigProvider>

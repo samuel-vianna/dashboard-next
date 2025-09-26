@@ -15,4 +15,6 @@ declare global {
     brands: Brand[];
     dateRange: string[];
   }
+
+  type LineChartType = "weekly" | "cumulative";
 }

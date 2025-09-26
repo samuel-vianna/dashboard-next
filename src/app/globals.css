@@ -3,3 +3,25 @@
 body {
   margin: 0;
 }
+
+.ant-tabs-nav {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 0rem !important;
+}
+
+.ant-tabs-content {
+  height: 100%;
+}
+
+.ant-tabs-tabpane-active {
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .ant-tabs-nav {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 0rem !important;
+  }
+}

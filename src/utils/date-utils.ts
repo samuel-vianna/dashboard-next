@@ -1,4 +1,4 @@
-import { Frequency, DayOfWeek } from '@/types/scale'
+import { Frequency, DayOfWeek } from '@/types/global'
 
 export const DAYS_OF_WEEK: { value: DayOfWeek; label: string }[] = [
   { value: 'monday', label: 'Segunda-feira' },
