@@ -5,6 +5,15 @@ It contains mock data and a front-end only AI assistant called **"BrandAI / Mila
 
 The dashboard showcases clear chart visualizations, handles missing data gracefully, and simulates AI interactions for exploratory data analysis.
 
+<div align="center">
+    <img src="./public/dashboard.jpeg" alt="Dashboard Screenshot" width="800"/>
+</div>
+
+<div align="center">
+    <img src="./public/table.jpeg" alt="Table Screenshot" width="400"/>
+    <img src="./public/AI.jpeg" alt="AI Screenshot" width="400"/>
+</div>
+
 ---
 
 ## Tech Stack
